@@ -1,0 +1,81 @@
+
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    background: #17181a;
+    font-family: 'Montserrat', sans-serif;
+}
+html{
+    font-size: 62.5%;
+}
+
+#logo{
+    font-family: 'Abril Fatface', cursive;
+    color: white;
+}
+.nav-header{
+    min-height: 10vh;
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    color: white;
+    width: 80%;
+    margin: auto;
+    padding: 2rem 0rem;
+}
+.line1,.line2{
+    width: 3rem;
+    height: 0.2rem;
+    margin: 0.4rem;
+    background: white;
+    pointer-events: none;
+}
+
+.slide{
+    min-height: 100vh;
+    margin: 0 auto 0;
+    width: 80%;
+    display: flex;
+    color: white;
+    align-items: center;
+    justify-content: space-between;
+    background:#17181a;
+}
+
+.hero-desc{
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-basis: 25rem;
+    justify-content: center;
+    align-items: center;
+    padding-left: 5rem;
+    position: relative;
+}
+
+.hero-img{
+    flex: 1;
+    flex-basis: 25rem;
+    position: relative;
+}
+
+.hero-img img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.fashion-span{
+    color: rgb(255,139,93);
+}
+.mountain-span{
+    color: rgb(86,124,228);
+}
+.hike-span{
+    color: rgb(167,110,231);
+}
