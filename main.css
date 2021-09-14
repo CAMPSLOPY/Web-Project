@@ -28,6 +28,10 @@ html{
     margin: auto;
     padding: 2rem 0rem;
 }
+
+.burger{
+    cursor: pointer;
+}
 .line1,.line2{
     width: 3rem;
     height: 0.2rem;
@@ -58,6 +62,15 @@ html{
     position: relative;
 }
 
+.hero-desc h2{
+    font-family: 'Abril Fatface', cursive;
+    font-size: 5rem;
+}
+.hero-desc p{
+    padding: 3rem 0rem;
+    font-size: 1.5rem;
+    color: rgb(223,223,223);
+}
 .hero-img{
     flex: 1;
     flex-basis: 25rem;
@@ -78,4 +91,63 @@ html{
 }
 .hike-span{
     color: rgb(167,110,231);
+}
+
+.explore{
+    padding: 1rem 2rem;
+    background: none;
+    border: none;
+    color: white;
+    border: 1px solid white;
+    font-size: 1rem;
+    text-decoration: none;
+    align-self: flex-start;
+    cursor: pointer;
+}
+.nav-bar{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    z-index: 1;
+    opacity: 1;
+    clip-path: circle(50px at 100% -10%);
+    -webkit-clip-path: circle(50px at 100% -10%);
+}
+
+
+.nav-links{
+font-size: 3rem;
+flex-basis: 30rem;
+}
+
+.contact{
+flex-basis: 30rem;
+}
+
+.nav-links h3{
+    padding: 3rem 0rem;
+}
+.contact h2{
+    padding: 2rem 0rem;
+    font-size: 3rem;
+}
+
+.contact p{
+    font-size: 1.5rem;
+    line-height: 2rem;
+}
+.reveal-text,.reveal-img{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: green;
+
 }
