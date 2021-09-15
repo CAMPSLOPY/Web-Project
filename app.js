@@ -1,5 +1,6 @@
 let controller;
 let slideScene;
+let pageScene;
 
 function AnimationController (){
     controller = new ScrollMagic.Controller();
@@ -7,7 +8,7 @@ function AnimationController (){
     const nav = document.querySelector('.nav-header');
 
     // we LOOP over the slides
-    sliders.forEach(slide =>{
+    sliders.forEach((slide,index,slides) => {
         // selecting more elements from our workflow
      const revealImg = slide.querySelector('.reveal-img');
      const revealTxt = slide.querySelector('.reveal-text');
@@ -23,10 +24,35 @@ function AnimationController (){
 slideScene = new ScrollMagic.Scene({
     triggerElement: slide,
     triggerHook: 0.25,
-}).addIndicators()
+    reverse: false,
+}).setTween(slideTl)
+.addIndicators({
+    colorStart: "white",
+    name: "CAMP",
+    colorTrigger: "red",
+})
 .addTo(controller)
-    });
 
+
+// NEW ANIMATION FOR PAGE SCROLL
+const pageSliders = gsap.timeline();
+const nextSlide = slide.length - 1 === index ? 'end' : slides[index + 1 ]
+pageSliders.fromTo(slide, {opacity: 1, scale:1}, {opacity: 0, scale: 0});
+
+pageScene = new ScrollMagic.Scene({
+    triggerElement: slide,
+    duration: "100%",
+    triggerHook: 0,
+})
+.addIndicators({
+    colorStart: "yellow",
+    name: "PAGE-CAMP",
+    colorTrigger: 'purple',
+    indent: 200,
+}).setTween(pageSliders)
+.setPin(slide, {pushFollowers: false})
+.addTo(controller)
+});
 }
 
 AnimationController();
