@@ -36,8 +36,10 @@ slideScene = new ScrollMagic.Scene({
 
 // NEW ANIMATION FOR PAGE SCROLL
 const pageSliders = gsap.timeline();
-const nextSlide = slide.length - 1 === index ? 'end' : slides[index + 1 ]
-pageSliders.fromTo(slide, {opacity: 1, scale:1}, {opacity: 0, scale: 0});
+let nextSlide = slides.length - 1 === index ? 'end' : slides[index + 1 ];
+pageSliders.fromTo(nextSlide, {y:"0%"}, {y:"50%"});
+pageSliders.fromTo(slide, {opacity: 1, scale:1}, {opacity: 0, scale: 0.5});
+pageSliders.fromTo(nextSlide, {y:"50%"}, {y:"0%"}, '-=0.5');
 
 pageScene = new ScrollMagic.Scene({
     triggerElement: slide,
@@ -56,3 +58,10 @@ pageScene = new ScrollMagic.Scene({
 }
 
 AnimationController();
+
+
+var  alex =  (i) => {
+return i * 2;
+}
+
+console.log(alex(4));
